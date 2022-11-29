@@ -201,4 +201,19 @@ p{
     margin-left: 560px;
     font-size: 24px;
     font-family:sans-serif ;
+    animation: disappear 5s ease-in-out;
+}
+.file{
+    color:#fff;
+    font-size: 16px;
+}
+
+@keyframes disappear{
+     from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    } 
+    
 }

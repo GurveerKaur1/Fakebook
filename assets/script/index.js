@@ -14,7 +14,7 @@ const p = select('p')
 const container = select('body')
 let arr = [];
 
-function getImgData() {
+function getData() {
 
     window.URL = window.URL || window.webkitURL;
 
@@ -35,6 +35,9 @@ onEvent('click', button, function (event) {
 
 
     const div = document.createElement('div');
+    const div3 = document.createElement('div');
+    
+
     div.classList.add("shapes");
     child.prepend(div);
 
@@ -48,35 +51,21 @@ onEvent('click', button, function (event) {
     if (message.value !== '') {
         div.innerHTML = picture + message.value
         message.value = '';
-    }
+}
 
     if (image.files.length > 0) {
 
         let image2 = document.createElement('img');
-        // const now = new Date();
-        // const newdate = now.toString().substring(3, 15);
         const picture = `<div class="image" ><div> <img  class='main-image' src="./assets/img/butterfly-gdc7bad913_1920.jpg"></img> </div>
             <h3 class='user'>Gurveer kaur</h3> <div class="date"> ${newdate}</div></div>`
-  div.innerHTML = picture + message.value;
-
         image2.style.display = 'block';
         image2.classList.add('second-image')
-        image2.src = getImgData();
+        image2.src = getData();
         // message.value = '';
-        div.appendChild(image2) + message.value;
-        
-    }
-    //  div.innerHTML =  `<div class="image" ><div> <img  class='main-image' src="./assets/img/butterfly-gdc7bad913_1920.jpg"></img> </div>
-    //  <h3 class='user'>Gurveer kaur</h3> <div class="date"> ${newdate}</div></div>`
-
-
-
-
-
-
-
-
-
+        div.appendChild(div3);
+        div.appendChild(image2) + picture;
+        image.value = '';
+}
 });
 
 onEvent('click', img, function (event) {
