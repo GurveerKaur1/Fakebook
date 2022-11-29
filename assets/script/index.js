@@ -28,9 +28,9 @@ function getData() {
 onEvent('click', button, function (event) {
     event.preventDefault();
 
-    if (message.value.trim() === '') {
+    if (message.value.trim() === '' && image.files.length === 0) {
         p.innerText = 'Text is required'
-
+        return;
     }
 
 
@@ -51,6 +51,7 @@ onEvent('click', button, function (event) {
     if (message.value !== '') {
         div.innerHTML = picture + message.value
         message.value = '';
+        p.innerText = '';
 }
 
     if (image.files.length > 0) {
