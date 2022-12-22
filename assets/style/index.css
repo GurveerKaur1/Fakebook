@@ -6,6 +6,7 @@
 
 body{
     background-color: black;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 h1 span {
@@ -96,6 +97,8 @@ nav ul li+li {
 
 
 
+
+
 .row{
     display: grid;
     place-items: center;
@@ -173,6 +176,7 @@ button {
     height: 40px;
     width: 40px;
     border-radius: 50%;
+    line-height: 40px;
     margin-top: 24px;
     background-image: url(../img/butterfly-gdc7bad913_1920.jpg);
 }
@@ -183,7 +187,7 @@ button {
 
 h3{
     margin-top: 33px;
-    margin-left: 10px;;
+    margin-left: 10px;
 }
 
 .date{
@@ -216,4 +220,15 @@ p{
         opacity:0;
     } 
     
+}
+::-webkit-file-upload-button {
+    display: none;
+}
+label{
+    color:#fff;
+    margin-left: 5px;
+}
+
+button{
+    margin-right: 5px;
 }
