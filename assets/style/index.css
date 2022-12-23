@@ -9,6 +9,9 @@ body{
     height: calc(var(--vh, 1vh) * 100);
 }
 
+main{
+    height: calc(var(--vh, 1vh) * 100);
+}
 h1 span {
     color: #f9004d;
 }
