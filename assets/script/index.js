@@ -59,7 +59,7 @@ onEvent('click', button, function (event) {
         let image2 = document.createElement('img');
         const picture = `<div class="image" ><div> <img  class='main-image' src="./assets/img/butterfly-gdc7bad913_1920.jpg"></img> </div>
             <h3 class='user'>Gurveer kaur</h3> <div class="date"> ${newdate}</div></div>`
-        image2.style.display = 'block';
+        image2.style.display = 'inline';
         image2.classList.add('second-image')
         image2.src = getData();
         // message.value = '';
